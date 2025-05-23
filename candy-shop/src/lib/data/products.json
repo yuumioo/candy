@@ -1,0 +1,74 @@
+[
+    {
+      "id": "1",
+      "name": "Brynt Smörkola",
+      "description": "Decadent browned butter caramel in a crisp chocolate shell.",
+      "price": 7.29,
+      "imageUrl": "/pros/brynt.png",
+      "category": "Caramel",
+      "stock": 100
+    },
+    {
+      "id": "2",
+      "name": "Glögg",
+      "description": "Festive spiced mulled wine ganache enrobed in dark chocolate.",
+      "price": 9.99,
+      "imageUrl":  "/pros/glogg.png",
+      "category": "Seasonal",
+      "stock": 100
+    },
+    {
+        "id": "3",
+        "name": "Hallon / Basilika",
+        "description": "Tangy raspberry paired with a hint of fresh basil in white chocolate.",
+        "price": 6.79,
+        "imageUrl": "/pros/hallon.png",
+        "category": "Fruit Infused",
+        "stock": 100
+      },
+      {
+        "id": "4",
+        "name": "Kanelbulle",
+        "description": "Classic cinnamon bun flavors captured in a milk chocolate praline.",
+        "price": 8.19,
+        "imageUrl": "/pros/kanelbulle.png",
+        "category": "Bakery Inspired",
+        "stock": 100
+      },
+      {
+        "id": "5",
+        "name": "Mynta / Lime",
+        "description": "Refreshing mint and zesty lime combine in a vibrant dark chocolate square.",
+        "price": 5.49,
+        "imageUrl": "/pros/lime.png",
+        "category": "Citrus & Mint",
+        "stock": 100
+      },
+      {
+        "id": "6",
+        "name": "Hasselnöt/Mandel",
+        "description": "Crunchy roasted hazelnut and almond pieces in creamy milk chocolate.",
+        "price": 10.99,
+        "imageUrl": "/pros/mandel.png",
+        "category": "Nut Chocolate",
+        "stock": 100
+      },
+      {
+        "id": "7",
+        "name": "Mynta",
+        "description": "Cool and invigorating pure mint fondant covered in rich dark chocolate.",
+        "price": 4.99,
+        "imageUrl": "/pros/mint.png",
+        "category": "Mint Chocolate",
+        "stock": 100
+      },
+      {
+        "id": "8",
+        "name": "Saffran",
+        "description": "Exotic saffron infused white chocolate with a luxurious melt.",
+        "price": 11.49,
+        "imageUrl": "/pros/saffran.png",
+        "category": "Gourmet",
+        "stock": 100
+      }
+  ]
