@@ -17,8 +17,8 @@ export interface Product {
   }
 
 export default function ProductCard({product} : {product:Product}){
-    const [isAdded, setIsAdded] = useState(false);
-    const {addNewItem} = useCart();
+    const {cartItems, addNewItem} = useCart();
+    const isProductAdded = cartItems.some(item => item.id===product.id);
 
     return (
         <div className="block shadow rounded-lg overflow-hidden">
@@ -38,9 +38,9 @@ export default function ProductCard({product} : {product:Product}){
                 </div>
                 <div>
                 
-                    {!isAdded ? (
+                    {!isProductAdded ? (
                         <button 
-                        onClick={()=>{setIsAdded(true); addNewItem(product)}} 
+                        onClick={()=>{addNewItem(product)}} 
                         className="bg-white shadow rounded-xl text-2xl py-2 px-4 hover:bg-gray-100"
                         >
                             +

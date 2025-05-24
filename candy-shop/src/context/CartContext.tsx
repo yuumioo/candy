@@ -35,17 +35,15 @@ export function CartProvider({children}:{children:React.ReactNode}){
     const deleteFromCart = (product : CartItem) => {
         setCartItem((prevItems) => {
             return prevItems.map( item =>
-                item.id === product.id ? {...item, quantity: item.quantity - 1} : item
-                );
+                item.id === product.id ? {...item, quantity: Math.max(0, item.quantity - 1)} : item
+                ).filter(item => item.quantity > 0);
             }
         );
     };
 
     const emptyFromCart = (product : CartItem) => {
         setCartItem((prevItems) => {
-            return prevItems.map( item =>
-                item.id === product.id ? {...item, quantity: 0} : item
-                );
+            return prevItems.filter(item => item.id !== product.id);
             }
         );
     };
@@ -57,11 +55,16 @@ export function CartProvider({children}:{children:React.ReactNode}){
     };
 
     const addToCart = (product : CartItem) => {
-        setCartItem((prevItems) => {
-            return prevItems.map( item =>
-                item.id === product.id ? {...item, quantity: item.quantity + 1} : item
-            );
-        });
+        const itemExist = cartItems.find(item => item.id === product.id);
+        if(itemExist){
+            setCartItem((prevItems) => {
+                return prevItems.map( item =>
+                    item.id === product.id ? {...item, quantity: item.quantity + 1} : item
+                );
+            });
+        } else {
+            addNewItem(product);
+        }
     };
 
     return (
