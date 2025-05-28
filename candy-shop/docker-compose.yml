@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15     # Use official PostgreSQL version 15 image
+    environment:
+      POSTGRES_USER: myuser        # DB user (customize this)
+      POSTGRES_PASSWORD: mysecret  # DB password (customize this!)
+      POSTGRES_DB: mydatabase      # Database name (customize)
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Persist DB data
+    ports:
+      - "5432:5432"              # Expose port 5432 to host
+
+  web:
+    build: .                    # Build Dockerfile in current directory (your app)
+    ports:
+      - "8000:8000"             # Expose app port to host
+    depends_on:
+      - db                      # Make sure db starts before web
+
+volumes:
+  pgdata:                      # Declare persistent volume for DB
