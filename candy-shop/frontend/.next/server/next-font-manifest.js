@@ -1,1 +1,0 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/uann/Documents/sarah_web/candy-shop/frontend/src/app/page\":[\"static/media/3a8dc5763a8ae4b2-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
